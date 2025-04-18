@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@layer base {
+  :root {
+    --primary: #0a1e36;
+    --secondary: #1e3a5a;
+    --accent: #3d7ce5;
+    --light: #f5f9ff;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 10s infinite linear;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-20px) translateX(20px); }
+    50% { transform: translateY(0) translateX(40px); }
+    75% { transform: translateY(20px) translateX(20px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+
+  .animate-logo-float {
+    animation: logoFloat 3s ease-in-out infinite;
+  }
+
+  @keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
